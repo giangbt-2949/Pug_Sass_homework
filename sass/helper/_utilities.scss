@@ -1,0 +1,125 @@
+
+$utilities: (
+    "padding": (
+        "prefix": "p",
+        "values": (
+            "0": 0,
+            "1": 1rem,
+            "2": 2rem,
+            "3": 3rem,
+            "4": 4rem,
+            "5": 5rem
+        )
+    ),
+    "padding-left": (
+        "prefix": "pl",
+        "values": (
+            "0": 0,
+            "1": 1rem,
+            "2": 2rem,
+            "3": 3rem,
+            "4": 4rem,
+            "5": 5rem
+        ),
+    ),
+    "padding-right": (
+        "prefix": "pr",
+        "values": (
+            "0": 0,
+            "1": 1rem,
+            "2": 2rem,
+            "3": 3rem,
+            "4": 4rem,
+            "5": 5rem
+        ),
+    ),
+    "padding-top": (
+        "prefix": "pt",
+        "values": (
+            "0": 0,
+            "1": 1rem,
+            "2": 2rem,
+            "3": 3rem,
+            "4": 4rem,
+            "5": 5rem
+        ),
+    ),
+    "padding-bottom": (
+        "prefix": "pb",
+        "values": (
+            "0": 0,
+            "1": 1rem,
+            "2": 2rem,
+            "3": 3rem,
+            "4": 4rem,
+            "5": 5rem
+        ),
+    ),
+    "margin": (
+        "prefix": "m",
+        "values": (
+            "0": 0,
+            "1": 1rem,
+            "2": 2rem,
+            "3": 3rem,
+            "4": 4rem,
+            "5": 5rem
+    ),
+    ),
+    "margin-left": (
+        "prefix": "ml",
+        "values": (
+            "0": 0,
+            "1": 1rem,
+            "2": 2rem,
+            "3": 3rem,
+            "4": 4rem,
+            "5": 5rem
+    ),
+    ),
+    "margin-right": (
+        "prefix": "mr",
+        "values": (
+            "0": 0,
+            "1": 1rem,
+            "2": 2rem,
+            "3": 3rem,
+            "4": 4rem,
+            "5": 5rem
+    ),
+    ),
+    "margin-top": (
+        "prefix": "mt",
+        "values": (
+            "0": 0,
+            "1": 1rem,
+            "2": 2rem,
+            "3": 3rem,
+            "4": 4rem,
+            "5": 5rem
+    ),
+    ),
+    "margin-bottom": (
+        "prefix": "mb",
+        "values": (
+            "0": 0,
+            "1": 1rem,
+            "2": 2rem,
+            "3": 3rem,
+            "4": 4rem,
+            "5": 5rem
+    ),
+  ),
+);
+
+
+@each $property, $map in $utilities {
+    $prefix: map-get($map, "prefix");
+    $value: map-get($map, "values");
+
+    @each $k, $v in $value {
+        .#{$prefix}-#{$k} {
+            #{$property}: $v;
+        }
+    }
+}

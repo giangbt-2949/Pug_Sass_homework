@@ -1,0 +1,11 @@
+@mixin flexBox($justifyContent: center, $alignItems: center) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin circle($width, $height) {
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+}

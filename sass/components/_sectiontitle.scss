@@ -1,0 +1,27 @@
+
+
+.sectionTitle {
+    @include flexBox(space-between, center);
+
+    margin-bottom: 10px;
+
+    a {
+        color: $textColor-lightBlue;
+        font-size: $fs-md;
+    }
+
+    h3 {
+        position: relative;
+        padding-left: 10px;
+    }
+
+    h3::before {
+        content: "";
+        width: 5px;
+        height: 21px;
+        background-color: $textColor-darkRed;
+        position: absolute;
+        left: 0;
+        top: 2px;
+    }
+}

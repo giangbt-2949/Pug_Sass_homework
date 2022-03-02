@@ -1,0 +1,36 @@
+
+
+.news__container {
+    background-color: $textColor-white;
+}
+
+.news__content  {
+    @include flexBox(center, flex-start);
+
+    @include respond-to("smallphone-and-down") {
+        flex-direction: column;
+    }
+
+    .news__headline {
+        @include respond-to("smallphone-and-down") {
+            padding-right: 0;
+            margin-bottom: 12px;
+        }
+    }
+
+    .news__wrapper {
+        @include flexBox(flex-start, flex-start);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $navBorder;
+
+        img {
+            width: 88px;
+            height: 60px;
+        }
+
+        p {
+            font-size: $fs-md;
+        }
+    }
+}

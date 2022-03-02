@@ -1,0 +1,14 @@
+
+
+.order-btn {
+    button {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid $textColor-blue;
+        color: $textColor-blue;
+        padding: 6px 0;
+        border-radius: 6px;
+        font-size: $fs-md;
+        cursor: pointer;
+    }
+}

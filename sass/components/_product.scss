@@ -1,0 +1,40 @@
+
+
+.product__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    @include respond-to("smallphone-and-down") {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product__wrapper {
+        border-right: 1px solid $navBorder;
+        border-bottom: 1px solid $navBorder;
+        background-color: $textColor-white;
+
+        a {
+            color: $textColor-black;
+        }
+
+        p {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            font-size: $fs-md;
+        }
+
+        .product__price {
+            color: $textColor-price;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .product__sale {
+            color: $textColor-gray;
+            font-size: $fs-md;
+            text-decoration: line-through;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+include ./mixin
+
+footer  
+    .footer__top
+        .criteria.col-6
+            +criterion('https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/medal.svg?1642128607985', 'Cam kết chất lượng') 
+            +criterion('https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/safety.svg?1642128607985', 'Sản phẩm an toàn') 
+            +criterion('https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/refund.svg?1642128607985', 'Đổi trả trong 24h') 
+            +criterion('https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/truck.svg?1642128607985', 'Giao hàng nhanh chóng') 
+        .support.col-6
+            +supportContact('https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/call.svg?1628584401677', 'Hỗ trợ khách hàng', '1900.6750')
+            +supportContact('https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/call.svg?1628584401677', 'Hỗ trợ bảo hành', '1900.6750')
+    .footer__bottom.row
+        .col-md-4 
+            .footer__logo
+                img(src="https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/logo_footer.png?1642128607985" alt="footer-logo")
+            .location.row  
+                i(class="fa-solid fa-location-dot")
+                p Tầng 2 , tòa nhà HCMCC. 249A Thụy Khuê, Tây Hồ, Hà Nội
+            .social
+                +footerTitle('KÊNH THÔNG TIN')
+                .social__icons 
+                    +socialIcon('https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/facebook.svg?1642128607985')
+                    +socialIcon('https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/twitter.svg?1642128607985')
+                    +socialIcon('https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/instagram.svg?1642128607985')
+                    +socialIcon('https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/youtube.svg?1642128607985')
+        .col-md-4.footer__nav
+            div
+                +footerTitle('VỀ CHÚNG TÔI')
+                ul 
+                    +navLink('Giới thiệu về chúng tôi')
+                    +navLink('Quản lý chất lượng')
+                    +navLink('Điều khoản và điều kiện')
+                    +navLink('Tin tức thường ngày')
+                    +navLink('Liên hệ với chúng tôi')
+        .col-md-4.footer__nav
+            div
+                +footerTitle('HỖ TRỢ KHÁCH HÀNG')
+                ul
+                    +navLink('Trung tâm CSKH')
+                    +navLink('Chính sách thanh toán')
+                    +navLink('Chính sách giao hàng')
+                    +navLink('Chính sách đổi trả')
+                    +navLink('Hotline CSKH')
+
+

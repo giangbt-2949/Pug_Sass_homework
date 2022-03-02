@@ -1,0 +1,41 @@
+@import './helper/breakpoints';
+@import './helper/variable';
+@import './helper/base'; 
+@import './helper/utilities';
+@import './helper/mixin';
+@import './module/header';
+@import './module/main';
+@import './module/footer';
+@import './components/category';
+@import './components/button';
+@import './components/sectiontitle';
+@import './components/product';
+@import './components/news';
+@import './components/brands';
+
+
+.container {
+    width: 65vw;
+    margin: 0 auto;
+    display: flex;
+
+    @include respond-to("smallphone-and-down") {
+        width: 100vw;
+    }
+
+}
+
+.container-left {
+    width: 20%;
+    padding: 0 12px;
+}
+
+.container-right {
+    width: 80%;
+    padding: 0 12px;
+
+    @include respond-to("smallphone-and-down") {
+        width: 100vw;
+    }
+}
+

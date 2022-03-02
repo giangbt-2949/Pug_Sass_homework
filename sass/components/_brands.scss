@@ -1,0 +1,20 @@
+
+
+.brands__wrapper {
+    @include flexBox(space-evenly, center);
+
+    @include respond-to("smallphone-and-down") {
+        display: none;
+    }
+
+    background-color: $textColor-white;
+    height: 95px;
+
+    a {
+        padding: 0 12px;
+    }
+
+    a:hover {
+        border: 1px solid $textColor-price;
+    }
+}

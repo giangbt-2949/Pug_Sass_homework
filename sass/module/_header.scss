@@ -1,0 +1,186 @@
+
+header {
+    background-color: $primaryColor;
+    font-size: $fs-md;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    width: 100%;
+
+    @include respond-to("smallphone-and-down") {
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    .container-left {
+        padding: 0 8px;
+
+        @include respond-to("smallphone-and-down") {
+            display: none;
+        }
+    }
+
+    .header__icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .container-right {
+        @include flexBox(space-between, center);
+    }
+
+    .catalog {
+        background-color: $secondaryColor;
+        height: 60px;
+        @include flexBox(flex-start, center);
+
+        &__icon {
+            margin-left: 10px;
+            border: 1px solid $textColor-white;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        &__text {
+            margin-left: 10px;
+            color: $textColor-white;
+            font-weight: bold;
+        }
+    }    
+
+    .header__logo {
+        @include respond-to("smallphone-and-down") {
+                width: 10%;
+        }
+
+        img {
+            @include respond-to("smallphone-and-down") {
+                width: 30px;
+                height: 30px
+        }
+        }
+
+        #nav-btn {
+            display: none;
+
+            @include respond-to("smallphone-and-down") {
+                display: block
+        }
+
+        }
+    }
+
+    .header__search {
+        @include flexBox();
+
+        @include respond-to("smallphone-and-down") {
+            width: 70%;
+        }   
+
+        .header__form {
+            margin: 0;
+            position: relative;
+        }
+
+        .header__input {
+            border: none;
+            border-radius: 3px;
+            outline: none;
+            padding: 0 10px;
+            height: 40px;
+            width: 250px;
+
+            @include respond-to("smallphone-and-down") {
+                width: auto;
+            }   
+        }
+
+        .header__btn {
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(-10%,-50%);
+
+            @include respond-to("smallphone-and-down") {
+                right: 10px;
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .header__right {
+        width: 350px;
+        @include flexBox(space-between, center);
+
+        @include respond-to("smallphone-and-down") {
+            justify-content: flex-end;
+            width: 20%;
+        }
+        
+        .consultation {
+            color: $textColor-white;
+
+            .contact-num  {
+                font-weight: bold;
+            }
+        }
+
+        .login {
+            @include flexBox(flex-start, center);
+            color: $textColor-white;
+
+            &__icon {
+                margin-right: 10px;
+            }
+        }
+
+        .cart > a {
+            border: 1px solid $secondaryColor;
+            padding: 8px 10px;
+            color: $textColor-black;
+            background-color: $secondaryColor;
+            border-radius: 5px;
+        }
+
+        .contact-num {
+            font-size: 20px;
+        }
+    }
+
+    .consultation {
+        @include respond-to("smallphone-and-down") {
+            display: none;
+        }
+    }
+
+    .login__account {
+        @include respond-to("smallphone-and-down") {
+            display: none;
+        }
+    }
+
+    .cart {
+        span {
+            @include respond-to("smallphone-and-down") {
+                display: none;
+            }
+        }
+    }
+
+    .display-none {
+        @include respond-to("smallphone-and-down") {
+            display: none;
+        }
+    }
+}
+

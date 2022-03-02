@@ -1,0 +1,62 @@
+
+.categories {
+    border: 1px #f03482 solid;
+    padding: 10px
+}
+
+.categories__title {
+    @include flexBox(space-between, center);
+
+    .categories__buttons {
+        @include flexBox(space-between, center);
+        width: 60px;
+    }
+
+    button {
+        background-color: transparent;
+        border: 1px solid $cat-btn-color;
+        border-radius: 50%;
+        color: $categoryColor;
+        width: 25px;
+        height: 25px;
+        @include flexBox();
+    }
+}
+
+
+.category__list {
+    @include flexBox(space-between, center);
+
+    .category {
+        align-items: center;
+    }
+
+    p {
+        color: $textColor-black;
+        text-align: center;
+        font-size: $fs-md;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+    span {
+        @include flexBox();
+        width: 70px;
+        height: 70px;
+        border: 1px solid $categoryColor;
+        border-radius: 50%;
+    }
+
+    .display-none {
+        @include respond-to("smallphone-and-down") {
+            display: none;
+        }
+    }
+}

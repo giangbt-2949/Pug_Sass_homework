@@ -1,0 +1,95 @@
+
+mixin navItem(text) 
+    li.nav__item 
+            a= text  
+            i(class="fa fa-angle-down")
+
+
+mixin criterion(imgSrc, text)
+    .criterion.row
+        img(class="criterion__img" src=imgSrc alt="criterion")
+        p= text
+
+
+mixin supportContact(imgSrc, text, num) 
+    .support__wrapper 
+        .support__icon 
+            img(class="support__img" src=imgSrc alt="support-icon")
+        .support__info
+            p= text 
+            h2= num
+
+
+mixin socialIcon(imgSrc) 
+    a.social__icon
+        img(src=imgSrc)
+
+
+mixin footerTitle(text)
+    h3.footer__title= text
+
+
+mixin navLink(text)
+    li.nav__link
+        a= text
+
+
+mixin categoryList(list)
+    .category__list 
+        each val, i in list
+            if i < 3 
+                +category(val.imgSrc, val.title, null)
+            +category(val.imgSrc, val.title, "display-none")
+
+mixin category(imgSrc, text, className)
+    a(class=`category column ${className}`)
+        span
+            img(src=imgSrc alt="category")
+        p(class="pl-1 pr-1")= text
+
+
+
+mixin orderButton()
+    .order-btn 
+        button Đặt mua
+
+
+mixin sectionTitle(text)
+    .sectionTitle 
+        h3= text
+        a Xem tất cả
+
+
+
+mixin product(img, title, price, salePrice)
+    .product__wrapper 
+        .product.p-1 
+            .product__img
+                a 
+                    img(src=img alt="product")
+            .product__info 
+                p 
+                    a=title
+                .product__prices.column
+                    span(class="product__price")=price
+                    span(class="product__sale")=salePrice
+            +orderButton()
+
+
+mixin productList(list)
+    .product__list.mb-2
+        each val in list 
+            +product(val.imgSrc, val.title, val.price, val.salePrice)
+
+
+
+mixin news(imgSrc, title)
+    .news__wrapper 
+        a 
+            img(src=imgSrc)
+        p(class="ml-1")=title
+
+
+mixin brandLogo(imgSrc)
+    a 
+        img(src=imgSrc, alt="brand-logo")

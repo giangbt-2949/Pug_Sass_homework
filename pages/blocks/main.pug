@@ -1,0 +1,77 @@
+include ./mixin
+include ./var
+
+main 
+    .container 
+        .container-left 
+            nav.navbar
+                ul.nav__list 
+                    +navItem("ĐỒ UỐNG CÁC LOẠI")
+                    +navItem("SỮA CÁC LOẠI TÃ BỈM")
+                    +navItem("MỲ, CHÁO, PHỞ ĂN LIỀN")
+                    +navItem("DẦU ĂN, NƯỚC CHẤM, GIA VỊ")
+                    +navItem("BÁNH KẸO CÁC LOẠI")
+                    +navItem("CHĂM SÓC CÁ NHÂN")
+                    +navItem("VỆ SINH NHÀ CỬA")
+                    +navItem("ĐỒ DÙNG GIA ĐÌNH")
+                    +navItem("GẠO, THỰC PHẨM KHÁC")
+                    +navItem("ĐỒ ĐÔNG LẠNH, ĐỒ MÁT")
+        .container-right
+            section.big-banner.mb-1.mt-1 
+                a 
+                    img(src="https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/slider_2.jpg?1642128607985" alt="banner")
+            section.small-banners.mb-1 
+                .sm-banner 
+                    a 
+                        img(src="https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/slide_banner_1_image.jpg?1642128607985" alt="banner-smal")
+                .sm-banner 
+                    a 
+                        img(src="https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/slide_banner_2_image.jpg?1642128607985" alt="banner-smal")
+                .sm-banner 
+                    a 
+                        img(src="https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/slide_banner_3_image.jpg?1642128607985" alt="banner-smal")
+                .sm-banner 
+                    a 
+                        img(src="https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/slide_banner_4_image.jpg?1642128607985" alt="banner-smal")
+            section.categories.mb-2 
+                .categories__title.pb-1
+                        h3 Danh mục sản phẩm
+                        .categories__buttons
+                            button.categories__btn 
+                                i(class="fa-solid fa-angle-left")
+                            button.categories__btn 
+                                i(class="fa-solid fa-angle-right")
+                .categories__wrapper 
+                    +categoryList(categories)
+
+            section.mb-1
+                +sectionTitle("Đồ uống các loại")
+                +productList(drinkList)
+                +sectionTitle("Dầu ăn - gia vị")
+                +productList(condimentList)
+                +sectionTitle("Sản phẩm khác")
+                +productList(otherProducts)
+            
+            section.news.mb-2 
+                .news__container.p-1 
+                    .news__title.mb-1 
+                        h3 GÓC TIN TỨC
+                    .news__content 
+                        .news__headline.pr-2
+                            a
+                                img(src="https://bizweb.dktcdn.net/100/385/257/themes/762382/assets/blog_image.jpg?1642128607985" alt="news")
+                        .column
+                            each val in news 
+                                +news(val.imgSrc, val.title)
+
+            section.brands.mb-2 
+                .brands__wrapper 
+                    +brandLogo("https://bizweb.dktcdn.net/thumb/compact/100/385/257/themes/762382/assets/brand_1_image.png?1642128607985")
+                    +brandLogo("https://bizweb.dktcdn.net/thumb/compact/100/385/257/themes/762382/assets/brand_2_image.png?1642128607985")
+                    +brandLogo("https://bizweb.dktcdn.net/thumb/compact/100/385/257/themes/762382/assets/brand_3_image.png?1642128607985")
+                    +brandLogo("https://bizweb.dktcdn.net/thumb/compact/100/385/257/themes/762382/assets/brand_4_image.png?1642128607985")
+                    +brandLogo("https://bizweb.dktcdn.net/thumb/compact/100/385/257/themes/762382/assets/brand_5_image.png?1642128607985")
+                    +brandLogo("https://bizweb.dktcdn.net/thumb/compact/100/385/257/themes/762382/assets/brand_6_image.png?1642128607985")
+                    +brandLogo("https://bizweb.dktcdn.net/thumb/compact/100/385/257/themes/762382/assets/brand_7_image.png?1642128607985")
+
+            include ./footer
